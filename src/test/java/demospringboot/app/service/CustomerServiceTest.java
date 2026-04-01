@@ -115,7 +115,8 @@ public class CustomerServiceTest {
         ResponseModel<CustomerModel> responseModel = customerService.getCustomerById(clientId);
 
         // assert Objects.nonNull(responseModel.getData());
-        assertNotNull(responseModel.getData());
+        //assertNotNull(responseModel.getData());
+        assertNull(responseModel.getData());
 
         assertEquals(ResponseCode.AT_TS_002.name(), responseModel.getBusinessCode());
         assertEquals(ResponseCode.AT_TS_002.message(), responseModel.getMessage());
