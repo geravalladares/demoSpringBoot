@@ -38,7 +38,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        working-directory: ${{ env.APPLICATION_FOLDER }}
+        #working-directory: ${{ env.APPLICATION_FOLDER }}
         run: mvn clean package -DskipTests
 
       - name: Upload Artifact to S3
