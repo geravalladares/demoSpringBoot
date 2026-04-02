@@ -41,6 +41,9 @@ jobs:
         #working-directory: ${{ env.APPLICATION_FOLDER }}
         run: mvn clean package -DskipTests
 
+      - name: List directory structure
+        run: ls -la
+
       - name: Upload Artifact to S3
         #working-directory: ${{ env.APPLICATION_FOLDER }}/target
         #working-directory: /target
