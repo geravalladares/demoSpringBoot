@@ -1,7 +1,9 @@
-name: Build and Deploy to Dev
-
+name: CI Pipeline GH
 on:
-  workflow_dispatch:  # Ejecución manual
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
 
 env:
   APPLICATION_FOLDER: demoSpringBoot
