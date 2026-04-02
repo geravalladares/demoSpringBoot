@@ -7,9 +7,9 @@ on:
 
 env:
   APPLICATION_FOLDER: demoSpringBoot
-  AWS_REGION: us-east-1                  # ← Cambia por tu región
-  S3_BUCKET: amazon-s3-valladares-github       # ← Cambia por tu bucket
-  ARTIFACT_NAME: demoSpringBoot-0.0.1-SNAPSHOT.jar   # Nombre final del artifact
+  AWS_REGION: us-east-1                             # ← Cambia por tu región
+  S3_BUCKET: amazon-s3-valladares-github            # ← Cambia por tu bucket
+  ARTIFACT_NAME: demoSpringBoot-0.0.1-SNAPSHOT.jar  # Nombre final del artifact
 
 jobs:
   build:
