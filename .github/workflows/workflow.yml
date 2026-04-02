@@ -27,6 +27,7 @@ jobs:
 
   build:
     name: Build with Maven
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -45,7 +46,7 @@ jobs:
         run: ls -la target/
       # Subimos el artifact para que el siguiente job pueda usarlo
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: app-artifact
           path: target/*.jar
@@ -62,7 +63,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
       - name: Download Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: app-artifact
           path: target
