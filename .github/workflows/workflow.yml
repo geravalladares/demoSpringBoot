@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload Artifact to S3
         #working-directory: ${{ env.APPLICATION_FOLDER }}/target
-        working-directory: /target
+        #working-directory: /target
         run: |
           aws s3 cp *.war s3://${{ env.S3_BUCKET }}/${{ env.ARTIFACT_NAME }} \
             --metadata CommitSha=${{ github.sha }}
